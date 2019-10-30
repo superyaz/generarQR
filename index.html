@@ -16,16 +16,18 @@
 <body>
     <h1>Generar codigo QR</h1>
     <div class="d-flex justify-content-center align-items-center container">
-        <form onsubmit="generate(); return false">
-            <h3>Nombre y Enter</h3>
+        <form>
+            <h3>Ingresar Nombre</h3>
             <div class="form-gruop p-4">
                 <input type="text" id="qr" name="">
+                <input type="button" onclick="generate()" class="btn btn-success" value="Generar" />
             </div>
         </form>
     </div>
     <div class="d-flex justify-content-center align-items-center container">
         <div class="form-group p-4">
             <div id="qrResult">
+
             </div>
         </div>
     </div>
