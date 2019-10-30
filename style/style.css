@@ -11,3 +11,7 @@ img {
     height: 10rem;
     width: 10rem;
 }
+
+#qr {
+    text-align: center;
+}
