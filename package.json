@@ -1,0 +1,26 @@
+{
+  "name": "generarqr",
+  "version": "1.0.0",
+  "description": "Aplicación para generar códigos QR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superyaz/generarQR.git"
+  },
+  "author": "@superyaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superyaz/generarQR/issues"
+  },
+  "homepage": "https://github.com/superyaz/generarQR#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "canvas": "^2.6.0",
+    "jsbarcode": "^3.11.0"
+  }
+}

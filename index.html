@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generar QR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
+</head>
+
+<body>
+    <h1>Generador codigo QR</h1>
+    <div class="d-flex justify-content-center align-items-center container">
+        <form onsubmit="generate(); return false">
+            <h3>Ingresa nombre</h3>
+            <div class="form-gruop p-4">
+
+                <input type="text" id="qr" name="">
+            </div>
+        </form>
+    </div>
+    <div class="d-flex justify-content-center align-items-center container">
+        <div class="form-group p-4">
+            <div id="qrResult">
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center aling-items-center container">
+        <div class="form-group p-4">
+            <input type="file" id="file" name="file">
+            <p> QR Contect: <span id="content"></span></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var qrcode = new QRCode(document.getElementById('qrResult'), {
+            width: 100,
+            heidht: 100
+        });
+
+        function generate() {
+            var message = document.getElementById('qr');
+            if (!message.value) {
+                alert('Ingrese un texto por favor');
+                message.focus();
+                return;
+            }
+            qrcode.makeCode(message.value);
+        }
+    </script>
+
+    <script type="text/javascript" src="qrReader.js"></script>
+</body>
+
+</html>
